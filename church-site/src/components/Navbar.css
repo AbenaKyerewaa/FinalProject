@@ -1,0 +1,213 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Make html and body full width */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  width: 100%;
+}
+
+/* Top Bar */
+.top-bar {
+  width: 100%;
+  background: #8b1111;
+  color: white;
+  font-size: 14px;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 20px; /* optional inner padding */
+}
+
+.live-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: gold;
+  border-radius: 50%;
+}
+
+.watch-live {
+  color: white;
+  text-decoration: none;
+}
+
+.watch-live:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  background: #fefbfb;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.church-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-text h3 {
+  color: #8b1111;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.logo-text p {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Desktop Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: lighter;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #8b1111;
+}
+
+.desktop-links {
+  display: flex;
+  font-weight: bolder;
+}
+
+.desktop-btn {
+  display: inline-block;
+}
+
+/* Button */
+.church-btn {
+  background: #8b1111;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.church-btn:hover {
+  opacity: 0.9;
+}
+
+/* Mobile Hamburger */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.mobile-links {
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.mobile-links li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.mobile-btn {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-links,
+  .desktop-btn {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+}
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #eee;
+  padding: 10px 0;
+  display: none;
+  min-width: 180px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

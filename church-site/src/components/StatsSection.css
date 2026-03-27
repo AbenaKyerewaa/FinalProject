@@ -1,0 +1,86 @@
+/* Stats Section */
+.stats-section {
+  background-color: #f7ecec; /* bg-card */
+  border-top: 1px solid #eaeaea; /* border-y border-border */
+  border-bottom: 1px solid #eaeaea;
+  padding: 2.5rem 0; /* py-10 */
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* grid-cols-2 */
+  gap: 1.5rem; /* gap-6 */
+  text-align: center;
+}
+
+/* Medium screens and up */
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr); /* md:grid-cols-4 */
+  }
+}
+
+.stat-item {
+  animation: countUp 0.5s ease-out; /* animate-count-up */
+}
+
+.stat-value {
+  font-family: 'Playfair Display', 'Times New Roman', serif; /* font-display */
+  font-size: 1.875rem; /* 30px - text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #8b1111; /* text-primary - using your church red color */
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .stat-value {
+    font-size: 2.25rem; /* 36px - md:text-4xl */
+  }
+}
+
+.stat-label {
+  color: #666666; /* text-muted-foreground */
+  font-size: 0.875rem; /* 14px - text-sm */
+  margin-top: 0.25rem; /* mt-1 */
+}
+
+/* Animation for count up effect */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Add hover effect */
+.stat-item:hover .stat-value {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .stats-section {
+    padding: 1.5rem 0;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem; /* 24px for mobile */
+  }
+  
+  .stat-label {
+    font-size: 0.75rem; /* 12px for mobile */
+  }
+}

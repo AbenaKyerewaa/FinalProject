@@ -1,0 +1,590 @@
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --church-gold: #ffd700;
+  --primary-foreground: #ffffff;
+  --overlay-dark: rgba(0, 0, 0, 0.6);
+}
+
+/* Church Banner Section - with background image */
+.church-banner {
+  background-image: url('/hero-dove.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay to make text readable */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Welcome tag with gold star */
+.welcome-tag {
+  color: var(--church-gold);
+  font-weight: 600;
+  font-size: 0.875rem; /* 14px */
+  letter-spacing: 0.1em; /* tracking-widest */
+  text-transform: uppercase;
+  margin-bottom: 0.75rem; /* 12px - mb-3 */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main heading - OUR YEAR OF PEACE */
+.main-heading {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 2.25rem; /* 36px - text-4xl */
+  font-weight: 700;
+  color: var(--primary-foreground);
+  line-height: 1.2; /* leading-tight */
+  margin-bottom: 1rem; /* 16px - mb-4 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Medium screens (768px and up) */
+@media (min-width: 768px) {
+  .main-heading {
+    font-size: 3.75rem; /* 60px - md:text-6xl */
+  }
+}
+
+/* Large screens (1024px and up) */
+@media (min-width: 1024px) {
+  .main-heading {
+    font-size: 4.5rem; /* 72px - lg:text-7xl */
+  }
+}
+
+/* Year text - TWENTY-TWENTY SIX */
+.year-text {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 1.25rem; /* 20px - text-xl */
+  font-weight: 600;
+  color: var(--church-gold);
+  margin-bottom: 0.5rem; /* 8px - mb-2 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .year-text {
+    font-size: 1.5rem; /* 24px - md:text-2xl */
+  }
+}
+
+/* Scripture text */
+.scripture-text {
+  color: rgba(255, 255, 255, 0.8); /* primary-foreground/80 */
+  font-size: 0.875rem; /* 14px - text-sm */
+  font-style: italic;
+  margin-bottom: 1.5rem; /* 24px - mb-6 */
+  max-width: 28rem; /* 448px - max-w-md */
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .scripture-text {
+    font-size: 1rem; /* 16px - md:text-base */
+  }
+}
+
+/* Scripture reference */
+.scripture-ref {
+  font-style: normal;
+  font-size: 0.75rem; /* 12px - text-xs */
+  color: var(--church-gold);
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+/* Slogan text */
+.slogan-text {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 1.125rem; /* 18px - text-lg */
+  font-weight: 700;
+  color: var(--primary-foreground);
+  letter-spacing: 0.025em; /* tracking-wide */
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .slogan-text {
+    font-size: 1.25rem; /* 20px - md:text-xl */
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('/hero-dove.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-btn {
+  background: #8b1111;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #a31515;
+}
+
+/* Section styles */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* TEXT SIDE */
+.about-tag {
+  color: #8b1111;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.about-description {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-btn {
+  display: inline-block;
+  margin-top: 15px;
+  color: #ffffff;
+  background: #8b1111;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background: #a31515;
+}
+
+/* IMAGE SIDE */
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-image {
+    order: -1;
+  }
+}
+
+
+/* Ministries Section */
+.ministries-section {
+  background: #f5f5f5;
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Grid */
+.ministries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.ministry-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: #f3eaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.icon-box svg {
+  color: #8b1111;
+}
+
+/* Text */
+.ministry-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.ministry-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Link */
+.ministry-card a {
+  color: #8b1111;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ministry-card a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom link */
+.more-link {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.more-link a {
+  color: #8b1111;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .ministries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ministries-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+  .banner-container {
+    padding: 20px;
+  }
+  
+  .welcome-tag {
+    font-size: 0.75rem;
+  }
+  
+  .scripture-text {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* EVENTS SECTION */
+.events-section {
+  background: #f7f4f2;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.events-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.events-tag {
+  color: #8b1111;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.events-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.events-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* EVENT LIST */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+.event-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+}
+
+.event-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+/* DATE */
+.event-date {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.event-date .day {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #8b1111;
+}
+
+.event-date .month {
+  font-size: 12px;
+  color: #999;
+}
+
+/* INFO */
+.event-info {
+  flex: 1;
+  text-align: left;
+}
+
+.event-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.event-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* TAG */
+.event-tag {
+  background: #f3eaea;
+  color: #8b1111;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* SEE MORE */
+.events-more {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.events-more a {
+  color: #8b1111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.events-more a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .event-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .event-tag {
+    align-self: flex-end;
+  }
+}
+
+/* RESOURCES SECTION */
+.resources-section {
+  background: #f9f6f4;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.resources-tag {
+  color: #8b1111;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.resources-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.resources-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.resource-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.resource-card h3 {
+  margin-bottom: 10px;
+}
+
+.resource-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.resource-card span {
+  color: #8b1111;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}

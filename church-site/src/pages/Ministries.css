@@ -1,0 +1,114 @@
+/* PAGE */
+.ministries-page {
+  width: 100%;
+}
+
+/* HERO */
+.ministries-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('/hero-dove.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-tag {
+  color: #ffd700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.ministries-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-subtext {
+  color: rgba(255,255,255,0.8);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* SECTION */
+.ministries-section {
+  padding: 80px 20px;
+  background: #f7f7f7;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* GRID */
+.ministries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.ministry-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: #f3eaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.ministry-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.ministry-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* LINK */
+.learn-more {
+  color: #8b1111;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .ministries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ministries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ministries-hero h1 {
+    font-size: 28px;
+  }
+}
