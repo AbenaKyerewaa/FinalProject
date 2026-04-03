@@ -128,11 +128,24 @@ header {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+ 
 }
 
-.church-btn:hover {
-  opacity: 0.9;
+.church-btn, .church-btn.small-btn:hover {
+  text-decoration: underline;
+
 }
+.church-btn.small-btn {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
+   font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
 
 /* Mobile Hamburger */
 .mobile-toggle {
@@ -189,12 +202,15 @@ header {
 .dropdown-menu {
   position: absolute;
   top: 100%;
+   z-index: 1000;
   left: 0;
   background: white;
   border: 1px solid #eee;
   padding: 10px 0;
   display: none;
   min-width: 180px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
 }
 
 .dropdown-menu a {

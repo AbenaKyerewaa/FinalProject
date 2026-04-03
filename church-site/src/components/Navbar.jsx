@@ -11,12 +11,20 @@ function Navbar() {
     <header>
       {/* Top Bar */}
       <div className="top-bar">
-        <div className="top-container">
+        <div className="top-container flex items-center ">
           <span className="live-text">
             <span className="dot"></span>
             Live Service on Sundays | 9:00 AM
           </span>
-          <a href="#" className="watch-live">Watch Live →</a>
+          <div className="flex gap-2">
+      <a href="login" className=" church-btn small-btn">
+        Login
+      </a>
+      <a href="signup" className="church-btn small-btn">
+        Sign Up
+      </a>
+    </div>
+          <a href="sermon" className="watch-live">Watch Live →</a>
         </div>
       </div>
 

@@ -2,24 +2,25 @@ import { Link } from "react-router-dom";
 import "./Ministries.css";
 import {
   Users, Heart, Music, BookOpen, Baby, HandHelping,
-  Mic2, Globe, GraduationCap, Paintbrush, Shield, Soup,
-  Music2Icon,
-  HandGrab
+  Mic2, Shield, Soup, Church, Camera
 } from "lucide-react";
 
-const allMinistries = [
-  { slug: "youth-ministry", icon: Users, title: "Youth Ministry", description: "Empowering the next generation through vibrant study, fellowship, and community service." },
-  { slug: "womens-fellowship", icon: Heart, title: "Women's Fellowship", description: "Building strong relationships among women through prayer, study, and mutual support." },
+export const allMinistries = [
+  { slug: "womens-fellowship", icon: Heart, title: "Women's Fellowship", description: "Building strong relationships among women through prayer, study, and mutual support." , fullDescription:
+      "The Women’s Fellowship is a place where women are encouraged to grow spiritually, support one another, and serve the church with love and dedication."
+  },
+  { slug: "mens-ministry", icon: Shield, title: "Men's Fellowship", description: "Equipping men to be godly leaders in their homes, church, and community." },
+  { slug: "prayer-ministry", icon: Church, title: "Nahathien|Prayer Group ", description: "Establishing prayer warriors committed to interceding for our church and community." },
+  { slug: "seenim-ministry", icon: HandHelping, title: "SEENIM", description: "A ministry focused on nurturing students and young believers through fellowship, discipleship, and spiritual growth." },
+  { slug: "faith-society-ministry", icon: BookOpen, title: "Faith-Society", description: "A ministry focused on strengthening believers in their faith through prayer, Bible study, and spiritual guidance." },
   { slug: "worship-ministry", icon: Music, title: "Worship Ministry", description: "Leading our congregation in spirit-filled worship through music and praise." },
-  { slug: "community-outreach", icon: HandHelping, title: "Community Outreach", description: "Serving our local community through various outreach campaigns and initiatives." },
+  { slug: "youth-ministry", icon: Users, title: "Youth Ministry", description: "Empowering the next generation through vibrant study, fellowship, and community service." },
   { slug: "childrens-ministry", icon: Baby, title: "Children's Ministry", description: "Nurturing young hearts and minds with age-appropriate biblical teachings." },
-  { slug: "prayer-ministry", icon: BookOpen, title: "Prayer Group Ministry", description: "Establishing prayer warriors committed to interceding for our church and community." },
-  { slug: "mens-ministry", icon: Shield, title: "Men's Ministry", description: "Equipping men to be godly leaders in their homes, church, and community." },
-  { slug: "evangelism-ministry", icon: Globe, title: "Evangelism Ministry", description: "Spreading the Gospel through local and international mission efforts." },
-  { slug: "faith-society-ministry", icon: HandGrab , title: "Faith-Society Ministry", description: "A ministry focused on strengthening believers in their faith through prayer, Bible study, and spiritual guidance." },
-  { slug: "choir-ministry", icon: Music2Icon, title: "Choir Ministry", description: "A team of dedicated singers and musicians who lead the congregation in worship through music." },
-  { slug: "media-ministry", icon: Mic2, title: "Media Ministry", description: "Managing church media, live streaming, and digital communication." },
+  { slug: "choir-ministry", icon: Music, title: "Choir Ministry", description: "A team of dedicated singers and musicians who lead the congregation in worship through music." },
+  { slug: "media-ministry", icon: Camera, title: "Media Ministry", description: "Managing church media, live streaming, and digital communication." },
   { slug: "welfare-ministry", icon: Soup, title: "Welfare Ministry", description: "Supporting members and community through benevolence and care programs." },
+    { slug: "community-outreach", icon: HandHelping, title: "Community Outreach", description: "Serving our local community through various outreach campaigns and initiatives." },
+
 ];
 
 function Ministries() {

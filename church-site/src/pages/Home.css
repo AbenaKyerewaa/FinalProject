@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+   overflow: visible;
 }
 
 /* Dark overlay to make text readable */
