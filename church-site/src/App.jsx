@@ -8,28 +8,30 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Ministries from "./pages/Ministries";
 import Events from "./pages/Events";
-import Sermons from "./pages/Sermons";
 import Media from "./pages/Media";
 import Resources from "./pages/Resources";
-import Hymnal from "./pages/Hymnal";
-import Constitution from "./pages/Constitution";
 import Contact from "./pages/Contact";
 import MinistryDetail from "./pages/MinistryDetail";
 
 // ✅ NEW PAGES
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Dashboard from "./pages/Dashboard";
+import Login from "./pages/auth/Login";
+import Signup from "./pages/auth/Signup";
+import AdminDashboard from "./pages/dashboards/AdminDashboard";
+import UserDashboard from "./pages/dashboards/UserDashboard";
+import NewUser from "./pages/dashboards/NewUser";
 
 // 👇 THIS CONTROLS WHAT SHOWS
 function Layout() {
   const location = useLocation();
 
   // Pages where Navbar/Footer should be hidden
-  const hideLayout = ["/login", "/signup", "/dashboard"].includes(location.pathname);
+  const hideLayout = ["/login", "/signup", "/setup", "/dashboard/admin", "/dashboard/user"].includes(location.pathname);
+
+   // Pages where CTA should be hidden
+  const hideCTA = ["/contact", ].includes(location.pathname);
 
   return (
-    <>
+    <> 
       {/* SHOW ONLY ON PUBLIC PAGES */}
       {!hideLayout && <Navbar />}
 
@@ -42,18 +44,17 @@ function Layout() {
         <Route path="/events" element={<Events />} />
         <Route path="/media" element={<Media />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/resources/hymnal" element={<Hymnal />} />
-        <Route path="/resources/constitution" element={<Constitution />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/sermons" element={<Sermons />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/setup" element={<NewUser />} />
+        <Route path="/dashboard/admin" element={<AdminDashboard />} />
+        <Route path="/dashboard/user" element={<UserDashboard />} />
       </Routes>
 
       {/* SHOW ONLY ON PUBLIC PAGES */}
-      {!hideLayout && <CTASection />}
-      {!hideLayout && <Footer />}
+     {location.pathname !== "/contact" && !hideLayout && <CTASection />}
+     {!hideLayout && <Footer />}
     </>
   );
 }

@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Ministries.css";
+import { allMinistries } from "./ministriesData";
 import {
   Users, Heart, Music, BookOpen, Baby, HandHelping,
   Mic2, Shield, Soup, Church, Camera
 } from "lucide-react";
 
-export const allMinistries = [
+/**export const allMinistries = [
   { slug: "womens-fellowship", icon: Heart, title: "Women's Fellowship", description: "Building strong relationships among women through prayer, study, and mutual support." , fullDescription:
       "The Women’s Fellowship is a place where women are encouraged to grow spiritually, support one another, and serve the church with love and dedication."
   },
-  { slug: "mens-ministry", icon: Shield, title: "Men's Fellowship", description: "Equipping men to be godly leaders in their homes, church, and community." },
-  { slug: "prayer-ministry", icon: Church, title: "Nahathien|Prayer Group ", description: "Establishing prayer warriors committed to interceding for our church and community." },
+  { slug: "mens-ministry", icon: Shield, title: "Men's Fellowship", description: "Equipping men to be godly leaders in their homes, church, and community.", fullDescription: "GOD" },
+  { slug: "prayer-ministry", icon: Church, title: "Nahatheen|Prayer Group ", description: "Establishing prayer warriors committed to interceding for our church and community." },
   { slug: "seenim-ministry", icon: HandHelping, title: "SEENIM", description: "A ministry focused on nurturing students and young believers through fellowship, discipleship, and spiritual growth." },
   { slug: "faith-society-ministry", icon: BookOpen, title: "Faith-Society", description: "A ministry focused on strengthening believers in their faith through prayer, Bible study, and spiritual guidance." },
   { slug: "worship-ministry", icon: Music, title: "Worship Ministry", description: "Leading our congregation in spirit-filled worship through music and praise." },
@@ -21,18 +22,22 @@ export const allMinistries = [
   { slug: "welfare-ministry", icon: Soup, title: "Welfare Ministry", description: "Supporting members and community through benevolence and care programs." },
     { slug: "community-outreach", icon: HandHelping, title: "Community Outreach", description: "Serving our local community through various outreach campaigns and initiatives." },
 
-];
+];**/
 
 function Ministries() {
   return (
     <div className="ministries-page">
 
       {/* HERO */}
-      <section className="ministries-hero">
-        <div className="container">
-          <p className="hero-tag">✦ Serving Together</p>
-          <h1>OUR MINISTRIES</h1>
-          <p className="hero-subtext">
+      <section className="ministry-hero">
+        <div className="mh-cross">✝</div>
+        <div className="mh-orb mh-orb--1" />
+        <div className="mh-orb mh-orb--2" />
+        <div className="mh-inner">
+          <span className="mh-badge">✦ Join Us</span>
+          <h1 className="mh-title">OUR MINISTRIES</h1>
+          <div className="mh-rule" />
+          <p className="mh-text">
             Discover how you can serve and grow through our diverse ministries.
           </p>
         </div>

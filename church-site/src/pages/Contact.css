@@ -1,19 +1,26 @@
 /* PAGE */
-.ministries-page {
-  width: 100%;
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
 /* ── Hero ── */
-.ministry-hero {
+.contact-hero {
   position: relative;
-  min-height: 360px;
+  height: 360px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(174, 64, 64, 0.6), rgba(16, 0, 0, 0.6)),
-   url("cpic.png");
-  background-size: contain;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+   url("contactpic.jpg");
+  background-size: cover;
   background-position: center;
 }
 
@@ -96,82 +103,137 @@
 }
 
 /* SECTION */
-.ministries-section {
-  padding: 80px 20px;
+.contact-section {
+  padding: 70px 0;
   background: #f7f7f7;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 /* GRID */
-.ministries-grid {
+.contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
 }
 
-/* CARD */
-.ministry-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #333;
-  border: 1px solid #eee;
-  transition: 0.3s ease;
+/* TITLES */
+.section-title {
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
-.ministry-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+/* INFO */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* ICON */
-.icon-box {
-  width: 50px;
-  height: 50px;
-  background: #f3eaea;
+.info-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #8b0000;
+  color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+}
+
+.info-title {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* FORM */
+.form-wrapper {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(235, 9, 9, 0.1);
+}
+
+.contact-form h2 {
   margin-bottom: 15px;
 }
 
-/* TEXT */
-.ministry-card h3 {
-  font-size: 18px;
+/* INPUTS */
+.contact-form label {
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #8b0000;
+}
+
+/* ROW */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #a30000;
+}
+
+/* SUCCESS */
+.success-box {
+  text-align: center;
+  padding: 30px;
+}
+
+.success-icon {
+  font-size: 30px;
+  color: #8b0000;
   margin-bottom: 10px;
 }
 
-.ministry-card p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-/* LINK */
-.learn-more {
-  color: #8b1111;
-  font-weight: 600;
-}
-
 /* RESPONSIVE */
-@media (max-width: 992px) {
-  .ministries-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .ministries-grid {
+@media (max-width: 900px) {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .ministries-hero h1 {
-    font-size: 28px;
+  .row {
+    grid-template-columns: 1fr;
   }
 }

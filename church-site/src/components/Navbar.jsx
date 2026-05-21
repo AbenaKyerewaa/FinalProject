@@ -24,7 +24,7 @@ function Navbar() {
         Sign Up
       </a>
     </div>
-          <a href="sermon" className="watch-live">Watch Live →</a>
+          <a href="resources" className="watch-live">Watch Live →</a>
         </div>
       </div>
 
@@ -43,20 +43,8 @@ function Navbar() {
   <li><Link to="/about">About</Link></li>
   <li><Link to="/ministries">Ministries</Link></li>
   <li><Link to="/events">Events</Link></li>
-  <li className="dropdown">
-    <Link to="/media" className="nav-link">Media ▾</Link>
-    <div className="dropdown-menu">
-      <Link to="/media/sermons">Sermons</Link>
-    </div>
-  </li>
-  <li className="dropdown">
-   <Link to="/resources" className="nav-link">Resources ▾ </Link>
-    <div className="dropdown-menu">
-      <Link to="/resources/hymnal">Hymnal</Link>
-      <Link to="/resources/constitution">Constitution</Link>
-    </div>
-  </li>
-
+  <li><Link to="/media">Media</Link></li>
+  <li><Link to="/resources">Resources</Link></li>
   <li><Link to="/contact">Contact</Link></li>
 </ul>
     

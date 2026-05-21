@@ -20,12 +20,17 @@ const leadership = [
 const About = () => {
   return (
     <div className="about-page">
-      {/* Hero */}
+     
+       {/* HERO */}
       <section className="about-hero">
-        <div className="container text-center">
-          <p className="about-hero-subtitle">✦ Who We Are</p>
-          <h1 className="about-hero-title">ABOUT OUR CHURCH</h1>
-          <p className="about-hero-text">
+        <div className="mh-cross">✝</div>
+        <div className="mh-orb mh-orb--1" />
+        <div className="mh-orb mh-orb--2" />
+        <div className="mh-inner">
+          <span className="mh-badge">✦ Who We Are</span>
+          <h1 className="mh-title">ABOUT OUR CHURCH</h1>
+          <div className="mh-rule" />
+          <p className="mh-text">
             Over 100 years of faith, community, and spiritual transformation in Ghana and beyond.
           </p>
         </div>

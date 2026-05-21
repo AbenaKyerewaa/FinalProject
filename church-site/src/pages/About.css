@@ -5,67 +5,97 @@
   min-height: 100vh;
 }
 
-/* Hero Section */
+/* ── Hero ── */
 .about-hero {
-  background: linear-gradient(135deg, #8b1111 0%, #6b0e0e 100%);
-  padding: 120px 0 80px 0;
   position: relative;
+  height: 360px;
   overflow: hidden;
-}
-
-.about-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("slogan.webp");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(196, 17, 17, 0.6), rgba(146, 13, 13, 0.6)),
+   url("slogan.webp");
   background-size: cover;
   background-position: center;
-  opacity: 0.15;
-  pointer-events: none;
 }
 
-.about-hero::after {
-  content: '';
+.mh-cross {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.2) 100%);
+  font-size: 400px;
+  color: rgba(255,255,255,0.025);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-family: serif;
+  user-select: none;
+  line-height: 1;
+}
+
+.mh-orb {
+  position: absolute;
+  border-radius: 50%;
   pointer-events: none;
 }
+.mh-orb--1 {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(201,168,76,0.14), transparent 70%);
+  top: -120px; right: -100px;
+}
+.mh-orb--2 {
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(139,17,17,0.3), transparent 70%);
+  bottom: -80px; left: -60px;
+}
 
-.about-hero-subtitle {
-  color: #fbbf24;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+.mh-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 3rem 1rem;
+  animation: fadeUp 0.75s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mh-badge {
+  display: inline-block;
+  font-size: 0.72rem;
   font-weight: 500;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  animation: fadeInUp 0.6s ease-out;
+  color: var(--gold-lt);
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 0.32rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.1rem;
 }
 
-.about-hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  animation: fadeInUp 0.6s ease-out 0.1s backwards;
+.mh-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
 }
 
-.about-hero-text {
-  font-size: 1.125rem;
-  color: #fef9e6;
-  max-width: 600px;
+.mh-rule {
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1rem auto 1.1rem;
+}
+
+.mh-text {
+  max-width: 500px;
   margin: 0 auto;
-  line-height: 1.6;
-  animation: fadeInUp 0.6s ease-out 0.2s backwards;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.75;
 }
-
 /* History Section */
 .about-history {
   padding: 80px 0;

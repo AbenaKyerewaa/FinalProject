@@ -100,7 +100,7 @@ function Home() {
     <div className="icon-box"><Users size={22} /></div>
     <h3>Youth Ministry</h3>
     <p>Empowering the next generation through vibrant study, fellowship, and community service.</p>
-    <a href="#">Learn More →</a>
+    <a href="ministries/youth-ministry">Learn More →</a>
   </div>
 
   {/* Card 2 */}
@@ -108,7 +108,7 @@ function Home() {
     <div className="icon-box"><Heart size={22} /></div>
     <h3>Women's Fellowship</h3>
     <p>Building strong relationships among women through prayer, study, and mutual support.</p>
-    <a href="#">Learn More →</a>
+    <a href="ministries/women's-fellowship">Learn More →</a>
   </div>
 
   {/* Card 3 */}
@@ -116,7 +116,7 @@ function Home() {
     <div className="icon-box"><Music size={22} /></div>
     <h3>Worship Ministry</h3>
     <p>Leading our congregation in spirit-filled worship through music and praise.</p>
-    <a href="#">Learn More →</a>
+    <a href="ministries/worship-ministry">Learn More →</a>
   </div>
 
   {/* Card 4 */}
@@ -124,7 +124,7 @@ function Home() {
     <div className="icon-box"><HandHelping size={22} /></div>
     <h3>Community Outreach</h3>
     <p>Serving our local community through outreach campaigns and initiatives.</p>
-    <a href="#">Learn More →</a>
+    <a href="ministries/community-outreach">Learn More →</a>
   </div>
 
   {/* Card 5 */}
@@ -132,7 +132,7 @@ function Home() {
     <div className="icon-box"><Baby size={22} /></div>
     <h3>Children's Ministry</h3>
     <p>Nurturing young hearts with age-appropriate biblical teachings.</p>
-    <a href="#">Learn More →</a>
+    <a href="ministries/children's-ministry">Learn More →</a>
   </div>
 
   {/* Card 6 */}

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ─── Variables ──────────────────────────────────────────── */
+:root {
+  --crimson:       #8b1111;
+  --crimson-dark:  #6a0d0d;
+  --crimson-light: #a51414;
+  --gold:          #c9a84c;
+  --gold-light:    #e8d5a3;
+  --navy:          #0d1f35;
+  --navy-mid:      #1a3a5c;
+  --cream:         #fdf8f3;
+  --bg:            #f5f2ee;
+  --white:         #ffffff;
+  --border:        #e6ddd4;
+  --text:          #1a1a1a;
+  --muted:         #7a7370;
+}
+
+/* ─── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ─── Container ──────────────────────────────────────────── */
+.container {
+  width: 78%;
+  max-width: 920px;
+  margin: 0 auto;
+  min-height: 60px;
+}
+
+/* ─── Hero ───────────────────────────────────────────────── */
+.events-hero {
+  background:
+    linear-gradient(150deg, rgba(139,17,17,0.93) 0%, rgba(13,31,53,0.97) 100%),
+    url("/cpic.png") center / cover no-repeat;
+  color: white;
+  padding: 100px 20px 90px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* watermark cross */
+.events-hero::before {
+  content: "✝";
+  position: absolute;
+  font-size: 400px;
+  color: rgba(255,255,255,0.025);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-family: serif;
+  line-height: 1;
+}
+
+/* gold glow orb */
+.events-hero::after {
+  content: "";
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(201,168,76,0.18), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.events-hero-subtitle {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 0.35rem 1.1rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.events-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  position: relative;
+  line-height: 1.1;
+}
+
+/* gold underline accent */
+.events-hero-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1rem auto 0;
+}
+
+/* ─── Events List Section ────────────────────────────────── */
+.events-list {
+  padding: 64px 20px 80px;
+}
+
+/* ─── Month Box ──────────────────────────────────────────── */
+.month-box {
+  margin-bottom: 14px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 18px rgba(13,31,53,0.05);
+  transition: box-shadow 0.2s;
+  width: 100%;
+}
+
+.month-box:hover {
+  box-shadow: 0 8px 28px rgba(13,31,53,0.09);
+}
+
+/* ─── Month Header ───────────────────────────────────────── */
+.month-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-left: 4px solid var(--gold);
+  transition: background 0.22s;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.month-header:hover {
+  background: var(--navy-mid);
+}
+
+.month-header h2 {
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.month-header span {
+  color: var(--gold);
+  font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+
+/* ─── Month Events Wrapper ───────────────────────────────── */
+.month-events {
+  background: var(--cream);
+  padding: 12px;
+  animation: slideDown 0.22s ease both;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Event Card ─────────────────────────────────────────── */
+.events-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--crimson);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.events-card:last-child { margin-bottom: 0; }
+
+.events-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(139,17,17,0.1);
+  border-left-color: var(--gold);
+}
+
+/* ─── Date Box ───────────────────────────────────────────── */
+.date-box {
+  flex-shrink: 0;
+  width: 90px;
+  height: 52px;
+  background: rgba(139,17,17,0.07);
+  border: 1.5px solid rgba(139,17,17,0.18);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events-card-day {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--crimson);
+  line-height: 1;
+}
+
+/* ─── Card Text ──────────────────────────────────────────── */
+.flex-1 { flex: 1; min-width: 0; }
+
+.events-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.events-card-location {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ─── Tag ────────────────────────────────────────────────── */
+
+/* ─── Empty State ────────────────────────────────────────── */
+.no-events {
+  padding: 1rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.no-events::before {
+  content: "—";
+  color: var(--gold);
+  font-style: normal;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container { width: 93%; }
+
+  .events-card {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .events-card-tag {
+    margin-left: 0;
+  }
+
+  .events-hero-title { font-size: 2.4rem; }
+}
+
+@media (max-width: 480px) {
+  .events-hero { padding: 72px 20px 64px; }
+  .date-box { width: 44px; height: 44px; }
+  .events-card-day { font-size: 1.4rem; }
+}
